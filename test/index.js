@@ -1,0 +1,10 @@
+"use strict";
+exports.__esModule = true;
+var index_1 = require("../dist/index");
+var im = new index_1.InternetMessage();
+im.addDateHeader(new Date());
+im.addFromHeader([new index_1.Mailbox("jonathan@wilbur.space")]);
+im.addToHeader([new index_1.Mailbox("jonathan@wilbur.space")]);
+im.addSubjectHeader("What's goin' on, big guy?");
+im.body = "\nI see that you've got 17,000 dead fetuses on your property.\nAnything you want to talk about, champ?\n\n- Modern corporate managerial man\n";
+console.log(im.toString());

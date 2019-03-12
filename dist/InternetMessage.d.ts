@@ -1,0 +1,40 @@
+import { Group } from "./Group";
+import { Header } from "./Header";
+import { Mailbox } from "./Mailbox";
+import { MessageID } from "./MessageID";
+export declare class InternetMessage {
+    headers: Header[];
+    body: string;
+    toString(): string;
+    addDateHeader(date: Date): void;
+    addFromHeader(mailboxList: Mailbox[]): void;
+    addSenderHeader(mailbox: Mailbox): void;
+    addReplyToMailboxHeader(mailbox: string): void;
+    addReplyToGroupHeader(group: Group): void;
+    addToHeader(addresses: (Mailbox | Group)[]): void;
+    addCCHeader(addresses: (Mailbox | Group)[]): void;
+    addBCCHeader(addresses: (Mailbox | Group)[]): void;
+    addMessageIDHeader(id: MessageID): void;
+    addInReplyToHeader(ids: MessageID[]): void;
+    addReferencesHeader(ids: MessageID[]): void;
+    addSubjectHeader(subject: string): void;
+    addCommentsHeader(comments: string): void;
+    addKeywordsHeader(keywords: string[]): void;
+    addResentDateHeader(date: Date): void;
+    addResentFromHeader(mailboxList: Mailbox[]): void;
+    addResentSenderHeader(mailbox: Mailbox): void;
+    addResentToHeader(addresses: (Mailbox | Group)[]): void;
+    addResentCCHeader(addresses: (Mailbox | Group)[]): void;
+    addResentBCCHeader(addresses: (Mailbox | Group)[]): void;
+    addResentMessageIDHeader(id: MessageID): void;
+    addReturnHeader(address: string): void;
+    addReceivedHeader(details: {
+        fromStatedClient?: string;
+        fromActualClient?: string;
+        byServer?: string;
+        byComment?: string;
+        protocol?: string;
+        id?: string;
+        date?: Date;
+    }): void;
+}

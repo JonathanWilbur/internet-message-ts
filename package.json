@@ -1,0 +1,12 @@
+{
+  "name": "internet-message-ts",
+  "version": "0.1.0",
+  "description": "Library for RFC 5322 Internet Message Format.",
+  "main": "./dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jonathan M. Wilbur <jonathan@wilbur.space>",
+  "license": "MIT",
+  "types": "./dist/types/index.d.ts"
+}
